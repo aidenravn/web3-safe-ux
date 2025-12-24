@@ -1,49 +1,41 @@
-// src/identityObject.js
-// Identity Object class for Web3 Safe UX
+const crypto = require('crypto');
 
 class IdentityObject {
-  /**
-   * @param {string} address - Blockchain address (hex string)
-   * @param {string} name - Human-readable name
-   * @param {string} avatar - Avatar image path or URL
-   * @param {boolean} verified - Is the identity verified?
-   * @param {number} trustScore - Risk/trust score (0-100)
-   * @param {Array} lastTransactions - List of recent transactions
-   */
   constructor(address, name, avatar, verified, trustScore, lastTransactions = []) {
-    this.address = address;
+    this.addressHash = crypto.createHash('sha256').update(address).digest('hex'); // hashed address
     this.name = name;
     this.avatar = avatar;
     this.verified = verified;
     this.trustScore = trustScore;
     this.lastTransactions = lastTransactions;
+    this.badges = verified ? ['Verified'] : [];
   }
 
-  // Check if given address matches a verified identity
   isTrustedAddress(address) {
-    return this.address.toLowerCase() === address.toLowerCase() && this.verified;
+    const hash = crypto.createHash('sha256').update(address).digest('hex');
+    return this.addressHash === hash && this.verified;
   }
 
-  // Display a human-readable summary of the identity
   summary() {
-    return `${this.name} (${this.verified ? 'Verified' : 'Unverified'}) - Trust Score: ${this.trustScore}%`;
+    return `${this.name} (${this.badges.join(', ') || 'Unverified'}) - Trust Score: ${this.trustScore}%`;
   }
 
-  // Add a transaction to the recent history
   addTransaction(amount, currency, verified = false) {
     this.lastTransactions.push({ amount, currency, verified });
   }
 
-  // Display transaction history
   transactionHistory() {
     return this.lastTransactions.map(
-      (tx, index) =>
-        `#${index + 1} Sent ${tx.amount} ${tx.currency} (${tx.verified ? 'Verified' : 'Unverified'})`
+      (tx, i) => `#${i + 1} Sent ${tx.amount} ${tx.currency} (${tx.verified ? 'Verified' : 'Unverified'})`
     ).join('\n');
+  }
+
+  addBadge(badge) {
+    if (!this.badges.includes(badge)) this.badges.push(badge);
   }
 }
 
-// Example usage
+// Example
 const alice = new IdentityObject(
   '0xA1b2C3d4E5f6...',
   'Alice Johnson',
@@ -55,8 +47,6 @@ const alice = new IdentityObject(
 
 console.log(alice.summary());
 console.log(alice.isTrustedAddress('0xA1b2C3d4E5f6...')); // true
-console.log(alice.isTrustedAddress('0xB2c3D4e5F6g7...')); // false
 console.log(alice.transactionHistory());
 
-// Export for Node.js / other modules
 module.exports = IdentityObject;
