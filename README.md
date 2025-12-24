@@ -1,7 +1,19 @@
-
 # Web3 Safe UX Design
 
-A user-centered approach to **secure crypto transfers** by transforming blockchain addresses into **Identity Objects**. This repository aims to prevent human errors that can lead to massive losses, like sending funds to malicious addresses.
+A user-centered approach to **secure crypto transfers** by transforming blockchain addresses into **Identity Objects**.  
+This repository aims to prevent human errors that can lead to massive losses, like sending funds to malicious addresses.
+
+---
+
+## ⚠️ Disclaimer & Legal Notice
+
+**This project is for educational and illustrative purposes only.**  
+The authors **do not provide financial advice** and are **not responsible** for any financial loss, misuse, or damage resulting from the use of this repository, its code, or mockups.  
+
+**Important:**  
+- Mockups are **demo-only** and should **not be used with real funds**.  
+- Users must always **verify addresses independently** before sending any cryptocurrency.  
+- Forking or modifying this project does **not transfer any responsibility** from the user.  
 
 ---
 
@@ -48,7 +60,10 @@ We propose treating every blockchain address as a **human-readable, verifiable i
 ## Screenshots / Mockups
 
 ![Identity Object Mockup](images/identity-object-mockup.png)  
+*Demo only: do not use real funds.*
+
 ![Safe Transfer Flow](images/safe-transfer-flow.png)  
+*Demo only: illustrative UX flow.*
 
 ---
 
@@ -77,7 +92,7 @@ console.log(alice.transactionHistory());
 How to Use
 	1.	Clone the repository:
 
-git clone https://github.com/your-username/web3-safe-ux.git
+git clone https://github.com/aidenravn/web3-safe-ux.git
 
 
 	2.	Navigate to the project folder:
@@ -101,7 +116,7 @@ node src/identityObject.js
 
 Contribution
 
-We welcome contributions from designers, developers, and Web3 enthusiasts to improve Identity Object UX.
+We welcome contributions from designers, developers, and Web3 enthusiasts.
 Please open an issue or submit a pull request with your suggestions.
 
 ⸻
@@ -116,10 +131,3 @@ Future Plans
 License & Usage
 	•	Code & Examples: MIT License.
 	•	Mockup Images: Creative Commons Attribution 4.0 (CC BY 4.0). Please credit the creator if used.
-
-⸻
-
-Disclaimer
-
-This project is for educational and illustrative purposes only.
-The authors do not provide financial advice and are not responsible for any financial loss or misuse of the information, code, or mockups in this repository.
