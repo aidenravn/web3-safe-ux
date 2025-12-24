@@ -1,75 +1,72 @@
-# Web3 Safe UX Design
+Web3 Safe UX Design
 
-A user-centered approach to **secure crypto transfers** by transforming blockchain addresses into **Identity Objects**.  
+A user-centered approach to secure crypto transfers by transforming blockchain addresses into Identity Objects.
 This repository aims to prevent human errors that can lead to massive losses, like sending funds to malicious addresses.
 
----
+⸻
 
-## ⚠️ Disclaimer & Legal Notice
+⚠️ Disclaimer & Legal Notice
 
-**This project is for educational and illustrative purposes only.**  
-The authors **do not provide financial advice** and are **not responsible** for any financial loss, misuse, or damage resulting from the use of this repository, its code, or mockups.  
+This project is for educational and illustrative purposes only.
+The authors do not provide financial advice and are not responsible for any financial loss, misuse, or damage resulting from the use of this repository, its code, or mockups.
 
-**Important:**  
-- Mockups are **demo-only** and should **not be used with real funds**.  
-- Users must always **verify addresses independently** before sending any cryptocurrency.  
-- Forking or modifying this project does **not transfer any responsibility** from the user.  
+Important:
+	•	Mockups are demo-only and should not be used with real funds.
+	•	Users must always verify addresses independently before sending any cryptocurrency.
+	•	Forking or modifying this project does not transfer any responsibility from the user.
+	•	This project follows Cypherpunk principles: identity verification is decentralized, anonymous, and privacy-preserving.
 
----
+⸻
 
-## Problem Statement
+Problem Statement
 
-Blockchain addresses are long hex strings that are **difficult for humans to verify**, causing high-risk transactions. Mistakes can lead to financial loss.
+Blockchain addresses are long hex strings that are difficult for humans to verify, causing high-risk transactions. Mistakes can lead to financial loss.
 
----
+⸻
 
-## Solution: Identity Objects
+Solution: Identity Objects
 
-We propose treating every blockchain address as a **human-readable, verifiable identity**:
+We propose treating every blockchain address as a human-readable, verifiable, and privacy-preserving identity:
+	•	Avatar & Color Coding: Quickly identify recipients visually.
+	•	Human-readable Badges: Verified, Trusted, Recently Used.
+	•	Trust Score: Evaluate risk before sending funds, calculated decentralized and locally.
+	•	Transaction History Verification: Show previous verified transfers directly from the blockchain.
+	•	Copy-Paste Safety: Visual feedback when copied addresses match a trusted Identity Object.
+	•	Privacy First: Actual addresses are stored hashed locally to preserve anonymity.
 
-- **Avatar & Color Coding:** Quickly identify recipients visually.
-- **Human-readable Badges:** `Verified`, `Trusted`, `Recently Used`.
-- **Trust Score:** Evaluate risk before sending funds.
-- **Transaction History Verification:** Show previous verified transfers.
-- **Copy-Paste Safety:** Visual feedback when copied addresses match a trusted Identity Object.
+⸻
 
----
+Features
+	•	Transform blockchain addresses into human-readable, privacy-preserving Identity Objects.
+	•	Visual verification via avatars, color coding, and badges.
+	•	Trust score and transaction history for safer transactions.
+	•	Copy-paste safety alerts.
+	•	Fully illustrative and educational UX design examples.
+	•	Decentralized verification to maintain anonymity and user control.
 
-## Features
+⸻
 
-- Transform blockchain addresses into human-readable Identity Objects.
-- Visual verification via avatars, color coding, and badges.
-- Trust score and transaction history for safer transactions.
-- Copy-paste safety alerts.
-- Fully illustrative and educational UX design examples.
+User Flow
+	1.	User enters recipient address.
+	2.	System generates or retrieves Identity Object (hashed, privacy-preserving).
+	3.	Display avatar, color code, trust score, transaction history.
+	4.	User verifies information locally before sending funds.
+	5.	Confirmation screen shows meaningful visual cues:
 
----
+“You are sending $50M USDT to Alice (Verified) — Green Badge”
 
-## User Flow
+⸻
 
-1. User enters recipient address.
-2. System matches it to an Identity Object.
-3. Display avatar, color code, trust score, transaction history.
-4. User performs verification before sending funds.
-5. Confirmation screen shows meaningful visual information:
+Screenshots / Mockups
 
-> “You are sending $50M USDT to Alice (Verified) — Green Badge”
+Demo only: do not use real funds.
 
----
+Demo only: illustrative UX flow.
 
-## Screenshots / Mockups
+⸻
 
-![Identity Object Mockup](images/identity-object-mockup.png)  
-*Demo only: do not use real funds.*
+Code Example
 
-![Safe Transfer Flow](images/safe-transfer-flow.png)  
-*Demo only: illustrative UX flow.*
-
----
-
-## Code Example
-
-```javascript
 const IdentityObject = require('./src/identityObject.js');
 
 const alice = new IdentityObject(
@@ -94,21 +91,17 @@ How to Use
 
 git clone https://github.com/aidenravn/web3-safe-ux.git
 
-
 	2.	Navigate to the project folder:
 
 cd web3-safe-ux
-
 
 	3.	Install dependencies (if using Node.js):
 
 npm install
 
-
 	4.	Run the example:
 
 node src/identityObject.js
-
 
 	5.	Open mockup images in images/ for UX reference.
 
@@ -124,7 +117,8 @@ Please open an issue or submit a pull request with your suggestions.
 Future Plans
 	•	Interactive prototypes for web and mobile.
 	•	Integration with actual Web3 wallets for testing UX flows.
-	•	Expand trust scoring and verification methods.
+	•	Expand trust scoring and verification methods using decentralized protocols.
+	•	Enhance privacy-preserving mechanisms like hashed identities and P2P distribution.
 
 ⸻
 
