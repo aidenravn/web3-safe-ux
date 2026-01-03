@@ -1,3 +1,11 @@
+## 🤝 Contributing
+
+We welcome contributions from designers, developers, and Web3 enthusiasts!  
+
+Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines on how to safely contribute, test, and submit code or UX designs.  
+
+**⚠️ Reminder:** This project is **educational and illustrative only**. Do **not** use real funds with the examples or mockups. All Identity Objects and demo data are privacy-preserving and safe for experimentation.
+
 Web3 Safe UX Design
 
 A user-centered approach to secure crypto transfers by transforming blockchain addresses into Identity Objects.
